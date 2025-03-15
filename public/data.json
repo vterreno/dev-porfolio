@@ -1,0 +1,227 @@
+{
+  "personalInfo": {
+    "name": "Valentino Terreno",
+    "title": "Desarrollador FullStack",
+    "email": "ninot2016@gmail.com",
+    "githubNickname": "vterreno",
+    "location": "Córdoba, Argentina 🇦🇷",
+    "githubLink": "https://github.com/vterreno",
+    "linkedInLink": "www.linkedin.com/in/valentino-terreno",
+    "avatar": "https://github.com/vterreno.png",
+    "bio": [
+      " ",
+      " //* Acerca de mí",
+      " // Bienvenido a mi portfolio.",
+      " ",
+      " // Soy estudiante de Ing. En Sistemas de Información en la UTN - FRVM.",
+      " // Además, me desempeño como desarrollador web, combinando mis estudios ",
+      " // con la práctica en el mundo de la programación. Mi pasión por la ",
+      " // tecnología me impulsa a aprender constantemente, explorando nuevas  ",
+      " // herramientas y técnicas para crear nuevas experiencias digitales.",
+      " ",
+      " //TODO: Agregar link a mi CV"
+    ],
+    "experiences": [
+      "/*",
+      " * [Intereses]",
+      " * Soy una persona muy curiosa con múltiples intereses. Además de la informática, sigo de cerca el mundo de los NFT y",
+      " * las blockchains. En el futuro, me gustaría desarrollar algo en la red de Ethereum y TON.",
+      " *",
+      " * Soy un gran apasionado de la música; en particular, me encanta la cultura negra americana, desde el rap hasta el jazz y el RnB.",
+      " *",
+      " * Aunque últimamente no tengo mucho tiempo, también disfruto viendo series de televisión, siendo un gran fan de Mr. Robot.",
+      " *",
+      " * Me encantan los podcasts y hace algunos años creé uno junto a amigos llamado \"Issa Podcast\".",
+      " */"
+    ],
+    "education": [
+      "/*",
+      " * [Formación]",
+      " *",
+      " * [2023 - Presente] DevelHope",
+      " * Curso Full Stack Developer",
+      " * Tecnologías: HTML, CSS, SCSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS, Git",
+      " *",
+      " * [2018 - 2022] Universidad de Milán",
+      " * Grado en Ciencias Políticas",
+      " * Especialización: Relaciones Internacionales",
+      " * Tesis: \"El impacto de las criptomonedas en la economía global\"",
+      " *",
+      " * [2010 - 2015] Instituto Técnico Comercial",
+      " * Diploma en Administración, Finanzas y Marketing",
+      " * Calificación final: 92/100",
+      " *",
+      " * [Certificaciones]",
+      " * - Diseño Web Responsivo (freeCodeCamp)",
+      " * - Algoritmos y Estructuras de Datos en JavaScript (freeCodeCamp)",
+      " * - Inglés B2 (Cambridge English)",
+      " *",
+      " * [Formación Continua]",
+      " * Participo regularmente en talleres y cursos en línea para mantenerme actualizado sobre las últimas tecnologías",
+      " * y las mejores prácticas en el desarrollo web.",
+      " */"
+    ]
+  },
+  "skills": [
+    {
+      "name": "HTML",
+      "checked": true
+    },
+    {
+      "name": "SASS",
+      "checked": true
+    },
+    {
+      "name": "CSS",
+      "checked": true
+    },
+    {
+      "name": "Vue.js",
+      "checked": false
+    },
+    {
+      "name": "JavaScript",
+      "checked": true
+    },
+    {
+      "name": "Tailwind",
+      "checked": true
+    },
+    {
+      "name": "React",
+      "checked": true
+    },
+    {
+      "name": "Bootstrap",
+      "checked": false
+    },
+    {
+      "name": "TypeScript",
+      "checked": true
+    },
+    {
+      "name": "Git",
+      "checked": true
+    },
+    {
+      "name": "Node",
+      "checked": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "juseat-clone",
+      "number": 1,
+      "title": "justEat-clone",
+      "description": "Nel primo progetto durante il corso di DevelHope abbiamo replicato il sito di Just Eat.",
+      "imageSrc": "/placeholder.svg?height=200&width=400",
+      "githubLink": "#",
+      "content": [
+        "/*",
+        " * Project 1 // _justEat-clone",
+        " * Come primo progetto del corso abbiamo realizzato",
+        " * un clone del sito di Just Eat.",
+        " * Le pagine che abbiamo replicato sono:",
+        " * l'home e la pagina che elenca i ristoranti",
+        " * in un'area definita.",
+        " *",
+        " * In questo primo progetto abbiamo usato solamente",
+        " * HTML e CSS mentre per coordinare il lavoro in team",
+        " * abbiamo usato : Trello, GitHub, Discord, Notion",
+        " * e la metodologia Agile.",
+        " *",
+        " */"
+      ],
+      "images": [
+        {
+          "src": "/placeholder.svg?height=300&width=400",
+          "alt": "JustEat Clone Homepage"
+        },
+        {
+          "src": "/placeholder.svg?height=300&width=400",
+          "alt": "JustEat Clone Restaurants"
+        }
+      ]
+    },
+    {
+      "id": "rtfkt-clone",
+      "number": 2,
+      "title": "rtfkt-clone",
+      "description": "Come secondo progetto stiamo replicando il sito di rtfkt.com e occupo la posizione di Team Leader.",
+      "imageSrc": "/placeholder.svg?height=200&width=400",
+      "githubLink": "#",
+      "content": [
+        "/*",
+        " * Project 2 // _rtfkt-clone",
+        " * Nel secondo progetto stiamo replicando il sito",
+        " * \"rtfkt.com\".",
+        " *",
+        " * A differenza del primo lo stack utilizzato in",
+        " * questo caso è : HTML, SCSS e Javascript.",
+        " * Gli strumenti per coordinare il lavoro sono",
+        " * gli stessi del primo progetto anche se in modo",
+        " * individuale ho aggiunto Jira così da imparare",
+        " * un nuovo tool.",
+        " *",
+        " * //+! N.B. Questo progetto non è ancora terminato !+//",
+        " *",
+        " *",
+        " */"
+      ],
+      "images": [
+        {
+          "title": "Desktop",
+          "src": "/placeholder.svg?height=400&width=300",
+          "alt": "RTFKT Clone Desktop"
+        },
+        {
+          "title": "Mobile",
+          "src": "/placeholder.svg?height=400&width=200",
+          "alt": "RTFKT Clone Mobile"
+        }
+      ]
+    },
+    {
+      "id": "alpha-spy",
+      "number": 3,
+      "title": "alpha-spy",
+      "description": "Come progetto personale con altre persone ho creato un bot discord dove, lo stesso bot, condivideva i messaggi inviati da un server su un altro.",
+      "imageSrc": "/placeholder.svg?height=200&width=400",
+      "githubLink": "#",
+      "content": [
+        "/*",
+        " * Project 3 // _alpha-spy",
+        " * Alpha Spy diversamente dai progetti precedenti",
+        " * è un progetto personale.",
+        " * In team abbiamo realizzato questo bot per Discord",
+        " * che ha la funzione di condividere i messaggi",
+        " * inviati da un server Discord ad un server",
+        " * personale.",
+        " *",
+        " * Essendo appassionato di NFTs e delle blockchain",
+        " * in generale risultava difficile essere aggiornati",
+        " * su più progetti e con questo bot si poteva",
+        " * ricevere tutte le news su un solo server.",
+        " *",
+        " * Il bot è scritto in Javascript soppordandoci sulla",
+        " * libreria Axios. Nello specifico il lavoro da me",
+        " * svolto è quello di creare i comandi attraverso",
+        " * i quali il bot eseguiva delle azioni e in seguito",
+        " * ho creato il database usando MongoDB e messo",
+        " * online il bot tramite Daki.",
+        " *",
+        " */"
+      ],
+      "logo": {
+        "src": "/placeholder.svg?height=100&width=400",
+        "alt": "Alpha Spy Logo"
+      }
+    }
+  ],
+  "codeSnippets": {
+    "apiExample": {
+      "title": "API Call Example",
+      "description": "Chiamata API mediante generateTemplateHTML + renderizzazione in HTML i dati ottenuti da funzione asincrona"
+    }
+  }
+}

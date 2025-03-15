@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a1929;
+  --foreground: #e2e8f0;
+  --primary: #38bdf8;
+  --secondary: #0ea5e9;
+  --accent: #0284c7;
+  --border: #1e3a5f;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@layer components {
+  .code-line {
+    @apply flex;
+  }
+
+  .line-number {
+    @apply text-gray-500 w-8 text-right pr-4 select-none;
+  }
+
+  .code-content {
+    @apply pl-4;
+  }
+
+  .comment {
+    @apply text-[#668f51];
+  }
+
+  .keyword {
+    @apply text-[#569cd6];
+  }
+
+  .string {
+    @apply text-[#ce9178];
+  }
+
+  .function {
+    @apply text-[#dcdcaa];
+  }
+
+  .variable {
+    @apply text-[#9cdcfe];
+  }
+
+  .type {
+    @apply text-[#4ec9b0];
+  }
+
+  .nav-link {
+    @apply px-4 py-2 border-b-2 border-transparent;
+    @apply hover:border-[#F7BE39];
+    @apply transition-colors;
+  }
+
+  .nav-link.active {
+    @apply border-[#F7BE39];
+  }
+
+  .folder-item {
+    @apply flex items-center gap-2 px-2 py-1 hover:bg-[#1e3a5f] cursor-pointer; 
+  }
+
+  .file-item {
+    @apply flex items-center gap-2 px-4 py-1 hover:bg-[#1e3a5f] cursor-pointer; 
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50px, -50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatReverse {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-50px, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-floatReverse {
+  animation: floatReverse 10s ease-in-out infinite;
+}
+
