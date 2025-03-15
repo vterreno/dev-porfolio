@@ -9,7 +9,7 @@ export default function Footer() {
         <Twitter size={16} />
       </Link>
       <div className="ml-auto flex items-center gap-1 text-xs sm:text-sm">
-        <Link href="https://github.com/daveinthahood" className="text-[#4ec9b0] border-l border-[#1e3a5f] p-2 sm:px-4 h-full flex items-center gap-1">
+        <Link href="https://github.com/vterreno" target="_blank" className="text-[#4ec9b0] border-l border-[#1e3a5f] p-2 sm:px-4 h-full flex items-center gap-1">
           @vterreno
           <Github size={16} />
         </Link>

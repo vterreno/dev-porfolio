@@ -16,7 +16,7 @@ export default function Home() {
             w-[400px] 
             h-[400px] 
             bg-gradient-radial 
-            from-[#00ff9d]/30
+            from-[#00ff9d]/20
             sm:from-[#00ff9d]/50
             to-transparent 
             blur-3xl 
@@ -33,7 +33,7 @@ export default function Home() {
             w-[500px] 
             h-[500px] 
             bg-gradient-radial 
-            from-[#4c00ff]/30
+            from-[#4c00ff]/20
             sm:from-[#4c00ff]/50
             to-transparent 
             blur-3xl 
@@ -50,7 +50,7 @@ export default function Home() {
             w-[400px] 
             h-[400px] 
             bg-gradient-radial 
-            from-[#00ff9d]/30
+            from-[#00ff9d]/20
             sm:from-[#00ff9d]/50
             to-transparent 
             blur-3xl 

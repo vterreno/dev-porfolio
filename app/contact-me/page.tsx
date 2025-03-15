@@ -48,6 +48,12 @@ export default function ContactPage() {
               {personalInfo.linkedInLink.replace("https://www.", "")}
             </a>
           </div>
+          <div>
+            <p className="text-sm text-gray-300">
+              Si encuentras algún error o deseas proponer alguna mejora, no dudes en colaborar en {" "}
+              <a href="#" target="_blank" className="text-[#4ec9b0] hover:underline break-all" >Github</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>

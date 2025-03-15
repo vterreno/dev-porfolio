@@ -5,7 +5,7 @@ import { getPersonalInfo } from "@/lib/data"
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: getPersonalInfo().name + " | " + getPersonalInfo().title,
+  title: "Porfolio de " + getPersonalInfo().name + " | " + getPersonalInfo().title,
   description: "Portfolio de" + getPersonalInfo().name + ", " + getPersonalInfo().title, 
   generator: 'v0.dev'
 }

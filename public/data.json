@@ -6,60 +6,69 @@
     "githubNickname": "vterreno",
     "location": "Córdoba, Argentina 🇦🇷",
     "githubLink": "https://github.com/vterreno",
-    "linkedInLink": "www.linkedin.com/in/valentino-terreno",
+    "linkedInLink": "https://www.linkedin.com/in/valentino-terreno/",
     "avatar": "https://github.com/vterreno.png",
     "bio": [
       " ",
-      " //* Acerca de mí",
-      " // Bienvenido a mi portfolio.",
+      " //* [Acerca de mí]",
+      " // Bienvenido a mi porfolio.",
       " ",
-      " // Soy estudiante de Ing. En Sistemas de Información en la UTN - FRVM.",
-      " // Además, me desempeño como desarrollador web, combinando mis estudios ",
-      " // con la práctica en el mundo de la programación. Mi pasión por la ",
-      " // tecnología me impulsa a aprender constantemente, explorando nuevas  ",
-      " // herramientas y técnicas para crear nuevas experiencias digitales.",
+      " // Soy estudiante de Ing. En Sistemas de Información en la UTN - FRVM. Además, me desempeño como desarrollador web, combinando mis estudioscon la práctica en el mundo de la programación. Mi pasión por latecnología me impulsa a aprender  constantemente, explorando nuevas herramientas y técnicas para crear nuevas  experiencias digitales.",
       " ",
       " //TODO: Agregar link a mi CV"
     ],
     "experiences": [
-      "/*",
-      " * [Intereses]",
-      " * Soy una persona muy curiosa con múltiples intereses. Además de la informática, sigo de cerca el mundo de los NFT y",
-      " * las blockchains. En el futuro, me gustaría desarrollar algo en la red de Ethereum y TON.",
-      " *",
-      " * Soy un gran apasionado de la música; en particular, me encanta la cultura negra americana, desde el rap hasta el jazz y el RnB.",
-      " *",
-      " * Aunque últimamente no tengo mucho tiempo, también disfruto viendo series de televisión, siendo un gran fan de Mr. Robot.",
-      " *",
-      " * Me encantan los podcasts y hace algunos años creé uno junto a amigos llamado \"Issa Podcast\".",
-      " */"
+      " ",
+      " //* [Experiencias]",
+      " ",
+      " //* [2021 - Presente] Desarrollador Web Freelance",
+      " // - Desarrollo de sitios web y aplicaciones web.",
+      " // - Implementación de diseños responsivos y accesibles.",
+      " // - Mantenimiento y actualización de sitios web.",
+      " ",
+      " //* [2020 - 2021] Desarrollador Web en Globant",
+      " // - Desarrollo de aplicaciones web y sitios web.",
+      " // - Implementación de diseños responsivos y accesibles.",
+      " // - Mantenimiento y actualización de sitios web.",
+      " ",
+      " //* [2019 - 2020] Desarrollador Web en MercadoLibre",
+      " // - Desarrollo de aplicaciones web y sitios web.",
+      " // - Implementación de diseños responsivos y accesibles.",
+      " // - Mantenimiento y actualización de sitios web.",
+      " "
     ],
     "education": [
-      "/*",
-      " * [Formación]",
-      " *",
-      " * [2023 - Presente] DevelHope",
-      " * Curso Full Stack Developer",
-      " * Tecnologías: HTML, CSS, SCSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS, Git",
-      " *",
-      " * [2018 - 2022] Universidad de Milán",
-      " * Grado en Ciencias Políticas",
-      " * Especialización: Relaciones Internacionales",
-      " * Tesis: \"El impacto de las criptomonedas en la economía global\"",
-      " *",
-      " * [2010 - 2015] Instituto Técnico Comercial",
-      " * Diploma en Administración, Finanzas y Marketing",
-      " * Calificación final: 92/100",
-      " *",
-      " * [Certificaciones]",
-      " * - Diseño Web Responsivo (freeCodeCamp)",
-      " * - Algoritmos y Estructuras de Datos en JavaScript (freeCodeCamp)",
-      " * - Inglés B2 (Cambridge English)",
-      " *",
-      " * [Formación Continua]",
-      " * Participo regularmente en talleres y cursos en línea para mantenerme actualizado sobre las últimas tecnologías",
-      " * y las mejores prácticas en el desarrollo web.",
-      " */"
+      " ",
+      " //* [Educación]", 
+      " ",
+      "//* [2023 - Presente] DevelHope",
+      "// Curso Full Stack Developer",
+      "// Tecnologías: HTML, CSS, SCSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS, Git",
+      " ",
+      "//* [2021 - 2026] Universidad Tecnológica Nacional - FRVM", 
+      "// Ingeniería en Sistemas de Información",
+      " ",
+      "//* [2010 - 2015] Instituto Técnico Comercial",
+      "// Diploma en Administración, Finanzas y Marketing",
+      "// Calificación final: 92/100",
+      " ",
+      "//* [Formación continua]",
+      "// Participo regularmente en talleres y cursos en línea para mantenerme actualizado sobre las últimas tecnologías y las mejores prácticas en el desarrollo web.",
+      " "
+    ],
+    "certifications": [
+      {
+        "title": "Certificación en Desarrollo Web",
+        "organization": "Coursera",
+        "link": "https://www.coursera.org/",
+        "date": "2021"
+      },
+      {
+        "title": "Certificación en Inglés",
+        "organization": "OpenEnglish",
+        "link": "https://www.openenglish.com/",
+        "date": "2020"
+      } 
     ]
   },
   "skills": [
@@ -110,15 +119,13 @@
   ],
   "projects": [
     {
-      "id": "juseat-clone",
-      "number": 1,
-      "title": "justEat-clone",
-      "description": "Nel primo progetto durante il corso di DevelHope abbiamo replicato il sito di Just Eat.",
-      "imageSrc": "/placeholder.svg?height=200&width=400",
+      "id": "miMascotapp",
+      "title": "miMascotapp",
       "githubLink": "#",
+      "demoLink": "#",
       "content": [
         "/*",
-        " * Project 1 // _justEat-clone",
+        " * Project 1 // _miMascotappt-clone",
         " * Come primo progetto del corso abbiamo realizzato",
         " * un clone del sito di Just Eat.",
         " * Le pagine che abbiamo replicato sono:",
@@ -141,6 +148,12 @@
           "src": "/placeholder.svg?height=300&width=400",
           "alt": "JustEat Clone Restaurants"
         }
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Agile",
+        "Trello"
       ]
     },
     {
@@ -220,8 +233,7 @@
   ],
   "codeSnippets": {
     "apiExample": {
-      "title": "API Call Example",
-      "description": "Chiamata API mediante generateTemplateHTML + renderizzazione in HTML i dati ottenuti da funzione asincrona"
+      "description": "Llamada a una API mediante generateTemplateHTML + renderización en HTML de los datos obtenidos de una función asíncrona"
     }
   }
 }

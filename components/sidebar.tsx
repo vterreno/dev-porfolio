@@ -56,8 +56,8 @@ export default function Sidebar() {
                 <span className="text-sm">bio.ts</span>
               </div>
               <div
-                className={cn("file-item", pathname === "/about-me/interests" && "bg-[#1e3a5f]")}
-                onClick={() => router.push("/about-me/interests")}
+                className={cn("file-item", pathname === "/about-me/experiences" && "bg-[#1e3a5f]")}
+                onClick={() => router.push("/about-me/experiences")}
               >
                 <File size={16} />
                 <span className="text-sm">experiencias.ts</span>
@@ -91,29 +91,22 @@ export default function Sidebar() {
                 <File size={16} />
                 <span className="text-sm">_justEat-clone</span>
               </div>
-              <div
-                className={cn("file-item", pathname === "/projects/rtfkt-clone" && "bg-[#1e3a5f]")}
-                onClick={() => router.push("/projects/rtfkt-clone")}
-              >
-                <File size={16} />
-                <span className="text-sm">_rtfkt-clone</span>
-              </div>
-              <div
-                className={cn("file-item", pathname === "/projects/alpha-spy" && "bg-[#1e3a5f]")}
-                onClick={() => router.push("/projects/alpha-spy")}
-              >
-                <File size={16} />
-                <span className="text-sm">_alpha-spy</span>
-              </div>
+              
             </div>
           )}
         </div>
       </div>
 
       <div className="mt-auto p-2 flex items-center justify-center gap-4 border-t border-[#1e3a5f]">
-        <User size={20} className="text-gray-400" />
-        <Mail size={20} className="text-gray-400" />
-        <Github size={20} className="text-gray-400" />
+        <a href="/" rel="noopener noreferrer">
+          <User size={20} className="text-gray-400" />
+        </a>
+        <a href="/contact-me" rel="noopener noreferrer">
+          <Mail size={20} className="text-gray-400" />
+        </a>
+        <a href="/contact-me" rel="noopener noreferrer">
+          <Github size={20} className="text-gray-400" />
+        </a>
       </div>
     </>
   )

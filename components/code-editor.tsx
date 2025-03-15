@@ -19,7 +19,7 @@ const applyCommentStyles = (content: React.ReactNode): React.ReactNode => {
     { regex: /^\s*\* TODO/, class: "text-[#FF9E1F]" },  
     { regex: /^\s*\/\/!/, class: "text-[#FF2D00]" },       
     { regex: /^\s*\/\/\*/, class: "text-[#86BE6A]" }, 
-    { regex: /^\s*\/\/\?/, class: "text-[#FFD700]" },      
+    { regex: /^\s*\/\/\?/, class: "text-[#1E90FF]" },      
     { regex: /^\s*\/\/TODO/, class: "text-[#FF9E1F]" },    
     { regex: /^\s*\/\/\//, class: "text-[#86BE6A] line-through" }, 
 ];
@@ -53,7 +53,7 @@ export default function CodeEditor({
           {title}
         </div>
       )}
-      <div className="p-2 sm:p-4 font-mono text-xs sm:text-sm overflow-auto">
+      <div className="p-2 sm:p-4 font-mono text-sm sm:text-sm overflow-auto">
         {content.map((line, index) => {
           const lineNumber = line.lineNumber ?? startLineNumber + index
           

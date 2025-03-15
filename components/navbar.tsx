@@ -64,7 +64,7 @@ export default function Navbar() {
               className={cn("px-4 py-3 border-b border-[#1e3a5f]", pathname === "/" && "text-[#F7BE39]")}
               onClick={() => setMobileMenuOpen(false)}
             >
-              _hole
+              _hola
             </Link>
             <Link
               href="/about-me/bio"

@@ -23,6 +23,7 @@ export interface Project {
   content: string[]
   images?: ProjectImage[]
   logo?: ProjectImage
+  technologies: string[]
 }
 
 export interface PersonalInfo {
@@ -34,10 +35,19 @@ export interface PersonalInfo {
   githubLink: string
   behanceLink: string
   linkedInLink: string
+  cvLink: string
   avatar: string
   bio: string[]
-  interests: string[]
+  experiences: string[]
   education: string[]
+  certifications?: Certificate[]
+}
+
+export interface Certificate {
+  title: string
+  organization: string
+  date: string
+  link: string
 }
 
 export interface CodeSnippet {

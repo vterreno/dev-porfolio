@@ -6,8 +6,7 @@ import { getPersonalInfo, getSkills } from "@/lib/data"
 export default function BioPage() {
   const personalInfo = getPersonalInfo()
   const skills = getSkills()
-
-  // Map the bio content to the format expected by CodeEditor
+  
   const bioContent = personalInfo.bio.map((line) => ({
     content: line,
   }))
@@ -16,13 +15,8 @@ export default function BioPage() {
     <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
       <CodeEditor title="bio" content={
         bioContent.map((line, index) => {
-          // Limpiamos las líneas que son solo asteriscos vacíos
-          const cleanedLine = typeof line.content === "string"
-            ? line.content.replace(/^\s*\*\s*$/, " *")
-            : ""
-          
           return {
-            content: cleanedLine,
+            content: line.content,
             lineNumber: index + 1
           }
         })
