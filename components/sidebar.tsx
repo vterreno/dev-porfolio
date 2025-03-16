@@ -13,6 +13,8 @@ export default function Sidebar() {
   const [personalInfoOpen, setPersonalInfoOpen] = useState(true)
   const [projectsOpen, setProjectsOpen] = useState(true)
 
+  const projects = JSON.parse(localStorage.getItem("projectTitles") || "[]")
+
   // Check if we're in mobile view
   useEffect(() => {
     const checkMobile = () => {
@@ -84,14 +86,17 @@ export default function Sidebar() {
 
           {projectsOpen && (
             <div className="pl-4">
-              <div
-                className={cn("file-item", pathname === "/projects/juseat-clone" && "bg-[#1e3a5f]")}
-                onClick={() => router.push("/projects/juseat-clone")}
-              >
-                <File size={16} />
-                <span className="text-sm">_justEat-clone</span>
-              </div>
-              
+              {projects.map((project: any) => (
+                <div
+                  key={project.title}
+                  className={cn("file-item", pathname === `/projects/${project.title}` && "bg-[#1e3a5f]")}
+                  onClick={() => router.push(`/projects/${project.title}`)}
+                >
+                  <File size={16} />
+                  <span className="text-sm">_{project.title}</span>
+                </div>
+              ))}
+
             </div>
           )}
         </div>
@@ -141,9 +146,8 @@ export default function Sidebar() {
       )}
 
       <div
-        className={`fixed top-0 left-0 h-full w-[280px] bg-[#0a1929] border-r border-[#1e3a5f] flex flex-col z-50 transform transition-transform duration-300 ease-in-out ${
-          mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-[280px] bg-[#0a1929] border-r border-[#1e3a5f] flex flex-col z-50 transform transition-transform duration-300 ease-in-out ${mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex justify-between items-center p-3 border-b border-[#1e3a5f]">
           <span className="text-[#4ec9b0]">explorer</span>
@@ -161,7 +165,7 @@ export default function Sidebar() {
   )
 }
 
-function cn(...classes: string[]) {
-  return classes.filter(Boolean).join(" ")
+function cn(...classes: (string | boolean | undefined)[]) {
+  return classes.filter((cls): cls is string => typeof cls === "string").join(" ");
 }
 

@@ -67,7 +67,7 @@ export default function ExperiencesPage() {
               <div className="pl-8">
                 <span className="text-[#9cdcfe]">const</span> <span className="text-[#4fc1ff]">result</span> ={" "}
                 <span className="text-[#569cd6]">await</span> <span className="text-[#dcdcaa]">fetch</span>(
-                <span className="text-[#ce9178]">"https://jsonplaceholder.typicode.com/experiences"</span>);
+                <span className="text-[#ce9178]">"https://exp-data.com"</span>);
               </div>
               <div className="pl-8">
                 <span className="text-[#9cdcfe]">state.data</span> = <span className="text-[#569cd6]">await</span>{" "}

@@ -3,12 +3,14 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
+  const projects = JSON.parse(localStorage.getItem("projectTitles") || "[]")
 
   return (
     <nav className="border-b border-[#1e3a5f] z-20 relative">
@@ -33,7 +35,7 @@ export default function Navbar() {
           </div>
 
           <div className="border-r border-[#1e3a5f]">
-            <Link href="/projects" className={cn("nav-link h-full px-6 flex items-center text-sm", pathname.startsWith("/projects") && "active")}>
+            <Link href={"/projects/" + projects[0].title} className={cn("nav-link h-full px-6 flex items-center text-sm", pathname.startsWith("/projects") && "active")}>
               _proyectos
             </Link>
           </div>
@@ -56,8 +58,10 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0a1929] border-b border-[#1e3a5f] absolute w-full z-30">
+      
+        <div className={`md:hidden bg-[#0a1929] border-b border-[#1e3a5f] absolute w-full z-30 transition-all duration-500 transform ${
+          mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
+        }`} style={{ top: "3rem" }}>
           <div className="flex flex-col">
             <Link
               href="/"
@@ -77,7 +81,7 @@ export default function Navbar() {
               _acerca-de-mi
             </Link>
             <Link
-              href="/projects"
+              href={"/projects/" + projects[0].title}
               className={cn(
                 "px-4 py-3 border-b border-[#1e3a5f]",
                 pathname.startsWith("/projects") && "text-[#F7BE39]",
@@ -95,7 +99,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      )}
+      
     </nav>
   )
 }

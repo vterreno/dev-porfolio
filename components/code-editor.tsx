@@ -1,4 +1,7 @@
+import { getAllProjects } from "@/lib/data"
 import React from "react"
+import { ArrowsEditor } from "./arrows-editor"
+import { url } from "inspector"
 
 interface CodeEditorProps {
   title?: string
@@ -10,19 +13,18 @@ interface CodeEditorProps {
   startLineNumber?: number
 }
 
-const applyCommentStyles = (content: React.ReactNode): React.ReactNode => { 
-  console.log(content)
+const applyCommentStyles = (content: React.ReactNode): React.ReactNode => {
   const commentStyles = [
-    { regex: /^\s*\* \!/, class: "text-[#FF2D00]" },        
-    { regex: /^\s*\* \*/, class: "text-[#86BE6A]" },        
-    { regex: /^\s*\* \?/, class: "text-[#1E90FF]" },        
-    { regex: /^\s*\* TODO/, class: "text-[#FF9E1F]" },  
-    { regex: /^\s*\/\/!/, class: "text-[#FF2D00]" },       
-    { regex: /^\s*\/\/\*/, class: "text-[#86BE6A]" }, 
-    { regex: /^\s*\/\/\?/, class: "text-[#1E90FF]" },      
-    { regex: /^\s*\/\/TODO/, class: "text-[#FF9E1F]" },    
-    { regex: /^\s*\/\/\//, class: "text-[#86BE6A] line-through" }, 
-];
+    { regex: /^\s*\* \!/, class: "text-[#FF2D00]" },
+    { regex: /^\s*\* \*/, class: "text-[#86BE6A]" },
+    { regex: /^\s*\* \?/, class: "text-[#1E90FF]" },
+    { regex: /^\s*\* TODO/, class: "text-[#FF9E1F]" },
+    { regex: /^\s*\/\/!/, class: "text-[#FF2D00]" },
+    { regex: /^\s*\/\/\*/, class: "text-[#86BE6A]" },
+    { regex: /^\s*\/\/\?/, class: "text-[#1E90FF]" },
+    { regex: /^\s*\/\/TODO/, class: "text-[#FF9E1F]" },
+    { regex: /^\s*\/\/\//, class: "text-[#86BE6A] line-through" },
+  ];
 
   for (const style of commentStyles) {
     let children;
@@ -31,7 +33,7 @@ const applyCommentStyles = (content: React.ReactNode): React.ReactNode => {
     } else if (React.isValidElement(content)) {
       children = (content as React.ReactElement<any>).props.children;
     }
-    
+
     if (children && style.regex.test(children)) {
       return <span className={style.class}>{content}</span>;
     }
@@ -46,17 +48,35 @@ export default function CodeEditor({
   className,
   startLineNumber = 1
 }: CodeEditorProps) {
+  const projects = getAllProjects();
+
+  const urlSteps = [
+    'about-me/bio',
+    'about-me/experiences',
+    'about-me/education'
+  ]
+
+  for (const project of projects) {
+    urlSteps.push(`projects/${project.title}`)
+  }
+
+  urlSteps.push('contact-me')
+
   return (
     <div className={`h-full ${className} text-gray-300 rounded-lg overflow-hidden border border-[#333]`}>
       {title && (
-        <div className="border-b border-[#333] p-2 text-sm font-medium">
-          {title}
-        </div>
+       
+          <div className="flex justify-between items-center border-b border-[#333] p-2 text-sm font-medium">
+            {title}
+            <ArrowsEditor urlSteps={urlSteps} />
+          </div>
+      
+
       )}
       <div className="p-2 sm:p-4 font-mono text-sm sm:text-sm overflow-auto">
         {content.map((line, index) => {
           const lineNumber = line.lineNumber ?? startLineNumber + index
-          
+
           return (
             <div key={lineNumber} className="flex hover:bg-[#122e4c]">
               <div className="line-number text-gray-500 pr-4 select-none w-12 text-right">

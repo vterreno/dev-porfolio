@@ -14,15 +14,11 @@ export interface ProjectImage {
 }
 
 export interface Project {
-  id: string
-  number: number
   title: string
-  description: string
-  imageSrc: string
   githubLink: string
+  demoLink: string
   content: string[]
   images?: ProjectImage[]
-  logo?: ProjectImage
   technologies: string[]
 }
 

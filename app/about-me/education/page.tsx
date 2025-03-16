@@ -61,18 +61,18 @@ export default function EducationPage() {
                 {/* Contenido del commit */}
                 <div className="flex-1">
                   {/* Hash y título */}
-                  <div className="flex items-baseline gap-2 mb-1">
+                  <div className="flex flex-col sm:flex-row text-pretty items-baseline gap-2 mb-1">
                     <span className="text-sm font-mono text-blue-400">
                       {generateRandomHash()}
                     </span>
-                    <span className="text-gray-300">{certificate.title}</span>
+                    <span className="text-gray-200">{certificate.title}</span>
                   </div>
                   
                   {/* Detalles de la certificación */}
-                  <div className="text-sm text-gray-500 space-y-1">
-                    <div>Institución: {certificate.organization}</div>
-                    <div>Fecha: {certificate.date}</div>
-                    <div>Link: <a href={certificate.link} target="_blank" className="text-blue-400">{certificate.link}</a></div>
+                  <div className="text-sm text-gray-400 text-pretty space-y-1">
+                    <div><span className="text-gray-300" >Institución:</span>  {certificate.organization}</div>
+                    <div><span className="text-gray-300" >Fecha:</span>  {certificate.date}</div>
+                    <div><a href={certificate.link} target="_blank" className="text-blue-400">Link del certificado</a></div>
                   </div>
                 </div>
               </div>

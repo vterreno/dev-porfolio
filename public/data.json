@@ -119,34 +119,20 @@
   ],
   "projects": [
     {
-      "id": "miMascotapp",
       "title": "miMascotapp",
       "githubLink": "#",
-      "demoLink": "#",
+      "demoLink": "https://mimascotapp.com.ar/",
       "content": [
-        "/*",
-        " * Project 1 // _miMascotappt-clone",
-        " * Come primo progetto del corso abbiamo realizzato",
-        " * un clone del sito di Just Eat.",
-        " * Le pagine che abbiamo replicato sono:",
-        " * l'home e la pagina che elenca i ristoranti",
-        " * in un'area definita.",
-        " *",
-        " * In questo primo progetto abbiamo usato solamente",
-        " * HTML e CSS mentre per coordinare il lavoro in team",
-        " * abbiamo usato : Trello, GitHub, Discord, Notion",
-        " * e la metodologia Agile.",
-        " *",
-        " */"
+        " ",
+        " //* [Proyecto]: _miMascotapp",
+        " ",
+        " // Landing page de una aplicación mobile para la gestión integral del cuidado de mascotas. El proyecto fue desarrollado en equipo y se utilizó la metodología Agile para la organización del trabajo. El diseño fue realizado en Figma y se completó en 3 sprints. Además, la web es responsive y accesible.",
+        " "
       ],
       "images": [
         {
-          "src": "/placeholder.svg?height=300&width=400",
-          "alt": "JustEat Clone Homepage"
-        },
-        {
-          "src": "/placeholder.svg?height=300&width=400",
-          "alt": "JustEat Clone Restaurants"
+          "src": "/mimascotapp.webp",
+          "alt": "miMascotapp"
         }
       ],
       "technologies": [
@@ -157,78 +143,34 @@
       ]
     },
     {
-      "id": "rtfkt-clone",
-      "number": 2,
-      "title": "rtfkt-clone",
-      "description": "Come secondo progetto stiamo replicando il sito di rtfkt.com e occupo la posizione di Team Leader.",
-      "imageSrc": "/placeholder.svg?height=200&width=400",
+      "title": "devPorfolio",
       "githubLink": "#",
+      "demoLink": "#",
       "content": [
-        "/*",
-        " * Project 2 // _rtfkt-clone",
-        " * Nel secondo progetto stiamo replicando il sito",
-        " * \"rtfkt.com\".",
-        " *",
-        " * A differenza del primo lo stack utilizzato in",
-        " * questo caso è : HTML, SCSS e Javascript.",
-        " * Gli strumenti per coordinare il lavoro sono",
-        " * gli stessi del primo progetto anche se in modo",
-        " * individuale ho aggiunto Jira così da imparare",
-        " * un nuovo tool.",
-        " *",
-        " * //+! N.B. Questo progetto non è ancora terminato !+//",
-        " *",
-        " *",
-        " */"
+        " ",
+        " //* [Proyecto]: _devPorfolio",
+        " ",
+        " // Porfolio personal para mostrar mis habilidades y proyectos. El proyecto fue desarrollado en solitario y se utilizó la metodología Agile para la organización del trabajo. El diseño fue realizado en Figma y se completó en 2 sprints. Además, la web es responsive y accesible.",
+        " "
       ],
       "images": [
         {
-          "title": "Desktop",
-          "src": "/placeholder.svg?height=400&width=300",
-          "alt": "RTFKT Clone Desktop"
+          "title": "Hero",
+          "src": "/devporfolio_1.webp",
+          "alt": "devPorfolio - Hero"
         },
         {
-          "title": "Mobile",
-          "src": "/placeholder.svg?height=400&width=200",
-          "alt": "RTFKT Clone Mobile"
+          "title": "Acerca de mi",
+          "src": "/devporfolio_2.webp",
+          "alt": "devPorfolio - Acerca de mi"
         }
-      ]
-    },
-    {
-      "id": "alpha-spy",
-      "number": 3,
-      "title": "alpha-spy",
-      "description": "Come progetto personale con altre persone ho creato un bot discord dove, lo stesso bot, condivideva i messaggi inviati da un server su un altro.",
-      "imageSrc": "/placeholder.svg?height=200&width=400",
-      "githubLink": "#",
-      "content": [
-        "/*",
-        " * Project 3 // _alpha-spy",
-        " * Alpha Spy diversamente dai progetti precedenti",
-        " * è un progetto personale.",
-        " * In team abbiamo realizzato questo bot per Discord",
-        " * che ha la funzione di condividere i messaggi",
-        " * inviati da un server Discord ad un server",
-        " * personale.",
-        " *",
-        " * Essendo appassionato di NFTs e delle blockchain",
-        " * in generale risultava difficile essere aggiornati",
-        " * su più progetti e con questo bot si poteva",
-        " * ricevere tutte le news su un solo server.",
-        " *",
-        " * Il bot è scritto in Javascript soppordandoci sulla",
-        " * libreria Axios. Nello specifico il lavoro da me",
-        " * svolto è quello di creare i comandi attraverso",
-        " * i quali il bot eseguiva delle azioni e in seguito",
-        " * ho creato il database usando MongoDB e messo",
-        " * online il bot tramite Daki.",
-        " *",
-        " */"
       ],
-      "logo": {
-        "src": "/placeholder.svg?height=100&width=400",
-        "alt": "Alpha Spy Logo"
-      }
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Agile",
+        "Trello"
+      ]
     }
   ],
   "codeSnippets": {

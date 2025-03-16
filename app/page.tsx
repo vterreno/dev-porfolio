@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button"
 import { getPersonalInfo } from "@/lib/data"
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
             animate-floatReverse
           "
         />
-         <div
+        <div
           className="
             absolute 
             top-[10%] 
@@ -67,48 +68,53 @@ export default function Home() {
           {personalInfo.name}
         </h1>
         <p className="font-mono text-[#6278F4] text-lg sm:text-xl">&gt; {personalInfo.title}</p>
-        <p className="font-mono text-[#6278F4] text-lg sm:text-xl mb-8 sm:mb-12 md:mb-16">&gt; {personalInfo.location}</p>
+        <p className="font-mono text-[#6278F4] text-lg sm:text-xl">&gt; {personalInfo.location}</p>
+        <a href="/about-me/bio"
+          className="block mb-4 sm:mb-6 bg-[#6278F4] text-white font-bold text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6 mb-8 sm:mb-12 md:mb-16 
+          rounded-md hover:bg-[#4c00ff] transition duration-300 ease-in-out mt-6 flex items-center group">
+          Ver porfolio <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-1">→</span>
+        </a>
+
         <div className="leading-[1.5em] hidden sm:block font-normal text-sm sm:text-[15px] overflow-x-auto">
-           
-            <div className="mt-3 sm:mt-4">
-              <span className="text-gray-500">// E-mail</span>
-            </div>
-            <div className="whitespace-nowrap">
-              <span className="text-[#569CD6]">const</span> <span className="text-[#4EC9B0]">email</span>{" "}
-              <span className="text-white">= </span> <span className="text-[#CE9178]">"</span>
-              <a href={email}>
-                <span className="text-[#CE9178] hover:underline">{personalInfo.email}</span>
-              </a>
-              <span className="text-[#CE9178]">"</span>
-              <span className="text-white">;</span>
-            </div>
-          
-            <div className="mt-3 sm:mt-4">
-              <span className="text-gray-500">// Github</span>
-            </div>
-            <div className="whitespace-nowrap">
-              <span className="text-[#569CD6]">const</span> <span className="text-[#4EC9B0]">githubLink</span>{" "}
-              <span className="text-white">=</span>  <span className="text-[#CE9178]">"</span>
-              <a href={personalInfo.githubLink} target="_blank">
-                <span className="text-[#CE9178] hover:underline">{personalInfo.githubLink}</span>
-              </a> 
-              <span className="text-[#CE9178]">"</span>
-              <span className="text-white">;</span>
-            </div>
-          
-            <div className="mt-3 sm:mt-4">
-              <span className="text-gray-500">// LinkedIn</span>
-            </div>
-            <div className="whitespace-nowrap">
-              <span className="text-[#569CD6]">const</span> <span className="text-[#4EC9B0]">linkedInLink</span>{" "}
-              <span className="text-white">=</span> <span className="text-[#CE9178]">"</span>
-              <a href={personalInfo.linkedInLink} target="_blank">
-                <span className="text-[#CE9178] hover:underline">{personalInfo.linkedInLink}</span>
-              </a>
-              <span className="text-[#CE9178]">"</span>
-              <span className="text-white">;</span>
-            </div>
-          
+          <div className="mt-3 sm:mt-4">
+            <span className="text-gray-500">// E-mail</span>
+          </div>
+          <div className="whitespace-nowrap">
+            <span className="text-[#569CD6]">const</span> <span className="text-[#4EC9B0]">email</span>{" "}
+            <span className="text-white">= </span> <span className="text-[#CE9178]">"</span>
+            <a href={email}>
+              <span className="text-[#CE9178] hover:underline">{personalInfo.email}</span>
+            </a>
+            <span className="text-[#CE9178]">"</span>
+            <span className="text-white">;</span>
+          </div>
+
+          <div className="mt-3 sm:mt-4">
+            <span className="text-gray-500">// Github</span>
+          </div>
+          <div className="whitespace-nowrap">
+            <span className="text-[#569CD6]">const</span> <span className="text-[#4EC9B0]">githubLink</span>{" "}
+            <span className="text-white">=</span>  <span className="text-[#CE9178]">"</span>
+            <a href={personalInfo.githubLink} target="_blank">
+              <span className="text-[#CE9178] hover:underline">{personalInfo.githubLink}</span>
+            </a>
+            <span className="text-[#CE9178]">"</span>
+            <span className="text-white">;</span>
+          </div>
+
+          <div className="mt-3 sm:mt-4">
+            <span className="text-gray-500">// LinkedIn</span>
+          </div>
+          <div className="whitespace-nowrap">
+            <span className="text-[#569CD6]">const</span> <span className="text-[#4EC9B0]">linkedInLink</span>{" "}
+            <span className="text-white">=</span> <span className="text-[#CE9178]">"</span>
+            <a href={personalInfo.linkedInLink} target="_blank">
+              <span className="text-[#CE9178] hover:underline">{personalInfo.linkedInLink}</span>
+            </a>
+            <span className="text-[#CE9178]">"</span>
+            <span className="text-white">;</span>
+          </div>
+
         </div>
       </div>
     </div>
