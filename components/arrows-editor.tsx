@@ -14,7 +14,7 @@ export function ArrowsEditor(): JSX.Element {
           ...projects.map(project => `projects/${project.title}`),
           'contact-me'
      ]
-     
+     console.log(urlSteps)
      return (
           <div className="flex gap-2 items-center mr-2">
                <MoveLeft

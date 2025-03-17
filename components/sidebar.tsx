@@ -21,7 +21,7 @@ export default function Sidebar() {
 
   const SidebarContent = () => (
     <>
-      <div className="flex-grow overflow-auto">
+      <div className="flex-grow  sm:h-[95%] overflow-auto">
         <div>
           <div
             className="flex items-center gap-1 px-2 py-1 cursor-pointer hover:bg-[#1e3a5f]"
@@ -101,7 +101,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Sidebar para desktop - siempre visible */}
-      <div className="hidden md:block w-60 border-r border-[#1e3a5f] flex flex-col">
+      <div className="hidden w-[280px] md:block border-r border-[#1e3a5f] flex flex-col">
         <SidebarContent />
       </div>
 
