@@ -4,18 +4,7 @@ import SkillItem from "@/components/skill-item"
 import data from "@/public/data.json"
 
 export default function BioPage() {
-  const { personalInfo, skills, projects } = data
-  const urlSteps = [
-    'about-me/bio',
-    'about-me/experiences',
-    'about-me/education',
-    ...(Array.isArray(projects) && projects.length > 0 
-      ? projects
-          .filter(project => project && typeof project === 'object' && 'title' in project && project.title)
-          .map(project => `projects/${project.title}`)
-      : []),
-    'contact-me'
-  ]
+  const { personalInfo, skills } = data
   
   const bioContent = personalInfo.bio.map((line) => ({
     content: line,
@@ -23,7 +12,7 @@ export default function BioPage() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-      <CodeEditor title="bio" urlSteps={urlSteps} content={
+      <CodeEditor title="bio" content={
         bioContent.map((line, index) => {
           return {
             content: line.content,

@@ -24,14 +24,6 @@ export default async function ProjectPage({ params }: { params: { project: strin
     return notFound();
   }
 
-  const urlSteps = [
-    'about-me/bio',
-    'about-me/experiences',
-    'about-me/education',
-    ...projects.map(project => `projects/${project.title}`),
-    'contact-me'
-  ]
-
   const projectContent = project.content.map((line) => ({
     content: line
   }));
@@ -40,7 +32,6 @@ export default async function ProjectPage({ params }: { params: { project: strin
     <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
       <CodeEditor
         title={project.title}
-        urlSteps={urlSteps}
         content={projectContent.map((line, index) => ({
           content: line.content,
           lineNumber: index + 1

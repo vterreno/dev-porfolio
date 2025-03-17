@@ -9,7 +9,6 @@ interface CodeEditorProps {
   }>
   className?: string
   startLineNumber?: number
-  urlSteps?: string[]
 }
 
 const applyCommentStyles = (content: React.ReactNode): React.ReactNode => {
@@ -46,19 +45,15 @@ export default function CodeEditor({
   content,
   className,
   startLineNumber = 1,
-  urlSteps
 }: CodeEditorProps) {
 
   return (
     <div className={`h-full ${className} text-gray-300 rounded-lg overflow-hidden border border-[#333]`}>
       {title && (
-       
-          <div className="flex justify-between items-center border-b border-[#333] p-2 px-4 text-sm font-medium">
-            {title}
-            {urlSteps && <ArrowsEditor urlSteps={urlSteps} />}
-          </div>
-      
-
+        <div className="flex justify-between items-center border-b border-[#333] p-2 px-4 text-sm font-medium">
+          {title}
+          <ArrowsEditor />
+        </div>
       )}
       <div className="p-2 sm:p-4 font-mono text-sm sm:text-sm overflow-auto">
         {content.map((line, index) => {

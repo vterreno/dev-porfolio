@@ -7,18 +7,7 @@ const generateRandomHash = () => {
 }
 
 export default function EducationPage() {
-  const { personalInfo, projects } = data
-  const urlSteps = [
-    'about-me/bio',
-    'about-me/experiences',
-    'about-me/education',
-    ...(Array.isArray(projects) && projects.length > 0 
-      ? projects
-          .filter(project => project && typeof project === 'object' && 'title' in project && project.title)
-          .map(project => `projects/${project.title}`)
-      : []),
-    'contact-me'
-  ]
+  const { personalInfo } = data
 
   const educationContent = personalInfo.education.map((line) => ({
     content: line
@@ -32,7 +21,6 @@ export default function EducationPage() {
           content: line.content,
           lineNumber: index + 1
         }))}
-        urlSteps={urlSteps}
       />
 
       <div className="p-4 border-t lg:border-t-0 lg:border-l border-[#1e3a5f]">

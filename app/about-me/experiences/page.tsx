@@ -3,28 +3,15 @@ import { Avatar } from "@/components/ui/avatar"
 import data from "@/public/data.json"
  
 export default function ExperiencesPage() {  
-  const { personalInfo, projects, codeSnippets } = data
+  const { personalInfo, codeSnippets } = data
   const experiencesContent = personalInfo.experiences.map((line) => ({
     content: line,
   }))
-
-  const urlSteps = [
-    'about-me/bio',
-    'about-me/experiences',
-    'about-me/education',
-    ...(Array.isArray(projects) && projects.length > 0 
-      ? projects
-          .filter(project => project && typeof project === 'object' && 'title' in project && project.title)
-          .map(project => `projects/${project.title}`)
-      : []),
-    'contact-me'
-  ]
 
   return (
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <CodeEditor 
           title="experiencias" 
-          urlSteps={urlSteps} 
           content={
             Array.isArray(experiencesContent) 
               ? experiencesContent.map((line, index) => {

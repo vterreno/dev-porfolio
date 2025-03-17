@@ -2,12 +2,19 @@
 
 import { MoveLeft, MoveRight } from "lucide-react";
 import { JSX } from "react";
+import data from "@/public/data.json";
 
-interface ArrowsEditorProps {
-     urlSteps: string[];
-}
 
-export function ArrowsEditor({ urlSteps }: ArrowsEditorProps): JSX.Element {
+export function ArrowsEditor(): JSX.Element {
+     const { projects } = data;
+     const urlSteps = [
+          'about-me/bio',
+          'about-me/experiences',
+          'about-me/education',
+          ...projects.map(project => `projects/${project.title}`),
+          'contact-me'
+     ]
+     
      return (
           <div className="flex gap-2 items-center mr-2">
                <MoveLeft
