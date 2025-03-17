@@ -3,17 +3,18 @@
 import { useState, useEffect } from "react"
 import { ChevronDown, ChevronRight, File, User, Mail, Github, X } from "lucide-react"
 import { usePathname, useRouter } from "next/navigation"
+import data from "@/public/data.json"
 
 export default function Sidebar() {
   const pathname = usePathname()
   const router = useRouter()
   const [isMobileView, setIsMobileView] = useState(false)
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
-
   const [personalInfoOpen, setPersonalInfoOpen] = useState(true)
   const [projectsOpen, setProjectsOpen] = useState(true)
+  const [hasMounted, setHasMounted] = useState(false);
 
-  const projects = JSON.parse(localStorage.getItem("projectTitles") || "[]")
+  const { projects } = data
 
   // Check if we're in mobile view
   useEffect(() => {
@@ -35,6 +36,15 @@ export default function Sidebar() {
   useEffect(() => {
     setMobileSidebarOpen(false)
   }, [pathname])
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return null
+  }
+
 
   const SidebarContent = () => (
     <>

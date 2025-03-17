@@ -1,30 +1,36 @@
 import CodeEditor from "@/components/code-editor";
 import { Avatar } from "@/components/ui/avatar";
-import { getAllProjects, getPersonalInfo } from "@/lib/data";
+import data from "@/public/data.json"
 import { Github, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// Esta función genera los parámetros para cada ruta dinámica
+const { personalInfo, projects } = data;
+
 export function generateStaticParams() {
-  const projects = getAllProjects();
   return projects.map(project => ({
     project: project.title,
   }));
 }
 
 export default async function ProjectPage({ params }: { params: { project: string } }) {
-  const personalInfo = getPersonalInfo();
-  const projects = getAllProjects();
   const projectParams = await params;
   const project = projects.find((proj) => {
-    return proj.title === projectParams.project
+    return proj.title.toLowerCase() === projectParams.project.toLowerCase()
   });
 
   if (!project) {
     return notFound();
   }
+
+  const urlSteps = [
+    'about-me/bio',
+    'about-me/experiences',
+    'about-me/education',
+    ...projects.map(project => `projects/${project.title}`),
+    'contact-me'
+  ]
 
   const projectContent = project.content.map((line) => ({
     content: line
@@ -34,6 +40,7 @@ export default async function ProjectPage({ params }: { params: { project: strin
     <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
       <CodeEditor
         title={project.title}
+        urlSteps={urlSteps}
         content={projectContent.map((line, index) => ({
           content: line.content,
           lineNumber: index + 1

@@ -1,7 +1,5 @@
-import { getAllProjects } from "@/lib/data"
 import React from "react"
 import { ArrowsEditor } from "./arrows-editor"
-import { url } from "inspector"
 
 interface CodeEditorProps {
   title?: string
@@ -11,6 +9,7 @@ interface CodeEditorProps {
   }>
   className?: string
   startLineNumber?: number
+  urlSteps?: string[]
 }
 
 const applyCommentStyles = (content: React.ReactNode): React.ReactNode => {
@@ -46,21 +45,9 @@ export default function CodeEditor({
   title,
   content,
   className,
-  startLineNumber = 1
+  startLineNumber = 1,
+  urlSteps
 }: CodeEditorProps) {
-  const projects = getAllProjects();
-
-  const urlSteps = [
-    'about-me/bio',
-    'about-me/experiences',
-    'about-me/education'
-  ]
-
-  for (const project of projects) {
-    urlSteps.push(`projects/${project.title}`)
-  }
-
-  urlSteps.push('contact-me')
 
   return (
     <div className={`h-full ${className} text-gray-300 rounded-lg overflow-hidden border border-[#333]`}>
@@ -68,7 +55,7 @@ export default function CodeEditor({
        
           <div className="flex justify-between items-center border-b border-[#333] p-2 text-sm font-medium">
             {title}
-            <ArrowsEditor urlSteps={urlSteps} />
+            {urlSteps && <ArrowsEditor urlSteps={urlSteps} />}
           </div>
       
 

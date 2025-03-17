@@ -1,8 +1,7 @@
-import { getPersonalInfo } from "@/lib/data"
+import data from "@/public/data.json"
 
 export default function ContactPage() {
-  const personalInfo = getPersonalInfo()
-
+  const { personalInfo } = data
   return (
     <div className="min-h-[calc(100vh-8rem)] flex items-center justify-center p-4 sm:p-8">
       <div className="w-full max-w-md">
@@ -49,9 +48,9 @@ export default function ContactPage() {
             </a>
           </div>
           <div>
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-pretty text-gray-300">
               Si encuentras algún error o deseas proponer alguna mejora, no dudes en colaborar en {" "}
-              <a href="#" target="_blank" className="text-[#4ec9b0] hover:underline break-all" >Github</a>.
+              <a href="#" target="_blank" className="text-[#4ec9b0] hover:underline" >Github</a>.
             </p>
           </div>
         </div>

@@ -1,39 +1,55 @@
 import CodeEditor from "@/components/code-editor"
 import { Avatar } from "@/components/ui/avatar"
-import { getPersonalInfo, getCodeSnippet } from "@/lib/data"
-
-export default function ExperiencesPage() {
-  const personalInfo = getPersonalInfo()
-  const apiExample = getCodeSnippet("apiExample")
-
+import data from "@/public/data.json"
+ 
+export default function ExperiencesPage() {  
+  const { personalInfo, projects, codeSnippets } = data
   const experiencesContent = personalInfo.experiences.map((line) => ({
     content: line,
   }))
 
+  const urlSteps = [
+    'about-me/bio',
+    'about-me/experiences',
+    'about-me/education',
+    ...(Array.isArray(projects) && projects.length > 0 
+      ? projects
+          .filter(project => project && typeof project === 'object' && 'title' in project && project.title)
+          .map(project => `projects/${project.title}`)
+      : []),
+    'contact-me'
+  ]
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-      <CodeEditor title="experiencias" content={
-        experiencesContent.map((line, index) => {
-          return {
-            content: line.content,
-            lineNumber: index + 1
-          }
-        })
-      }  />
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+        <CodeEditor 
+          title="experiencias" 
+          urlSteps={urlSteps} 
+          content={
+            Array.isArray(experiencesContent) 
+              ? experiencesContent.map((line, index) => {
+                  return {
+                    content: line?.content || "",
+                    lineNumber: index + 1
+                  }
+                })
+              : []
+          }  
+        />
 
       <div className="p-4 border-t lg:border-t-0 lg:border-l border-[#1e3a5f]">
         <div className="mb-6">
           <div className="text-gray-300 mb-2">// Snippet de código</div>
-          <div className="text-xs text-gray-400 mb-4">{apiExample?.description}</div>
+          <div className="text-xs text-gray-400 mb-4">{codeSnippets.apiExample?.description}</div>
 
           <div className="flex items-center gap-2 mb-2">
             <Avatar className="w-8 h-8">
               <img
-                src={personalInfo.avatar || "/placeholder.svg"}
-                alt={`@${personalInfo.githubNickname}`}
+                src={personalInfo?.avatar || "/placeholder.svg"}
+                alt={`@${personalInfo?.githubNickname || "user"}`}
               />
             </Avatar>
-            <div className="text-sm">@{personalInfo.githubNickname}</div>
+            <div className="text-sm">@{personalInfo?.githubNickname || "user"}</div>
           </div>
           <div className="text-xs text-gray-500 mb-4">Creado hace 5 meses</div>
 

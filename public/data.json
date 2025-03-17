@@ -175,6 +175,7 @@
   ],
   "codeSnippets": {
     "apiExample": {
+      "title": "Ejemplo API",
       "description": "Llamada a una API mediante generateTemplateHTML + renderización en HTML de los datos obtenidos de una función asíncrona"
     }
   }

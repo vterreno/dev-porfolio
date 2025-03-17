@@ -1,15 +1,24 @@
 import CodeEditor from "@/components/code-editor"
-import { Avatar } from "@/components/ui/avatar"
-import { getPersonalInfo } from "@/lib/data"
-import { GitBranch, GitCommit, GitMerge } from "lucide-react"
+import { GitBranch, GitCommit } from "lucide-react"
+import data from "@/public/data.json"
 
-// Función para generar hash aleatorio estilo Git
 const generateRandomHash = () => {
   return Math.random().toString(36).substring(2, 9)
 }
 
 export default function EducationPage() {
-  const personalInfo = getPersonalInfo()
+  const { personalInfo, projects } = data
+  const urlSteps = [
+    'about-me/bio',
+    'about-me/experiences',
+    'about-me/education',
+    ...(Array.isArray(projects) && projects.length > 0 
+      ? projects
+          .filter(project => project && typeof project === 'object' && 'title' in project && project.title)
+          .map(project => `projects/${project.title}`)
+      : []),
+    'contact-me'
+  ]
 
   const educationContent = personalInfo.education.map((line) => ({
     content: line
@@ -22,7 +31,8 @@ export default function EducationPage() {
         content={educationContent.map((line, index) => ({
           content: line.content,
           lineNumber: index + 1
-        }))} 
+        }))}
+        urlSteps={urlSteps}
       />
 
       <div className="p-4 border-t lg:border-t-0 lg:border-l border-[#1e3a5f]">
@@ -51,32 +61,40 @@ export default function EducationPage() {
           
           {/* Commits */}
           <div className="space-y-8">
-            {personalInfo.certifications?.map((certificate, index) => (
-              <div key={index} className="flex gap-4 relative">
-                {/* Ícono de commit */}
-                <div className="w-12 flex justify-center">
-                  <GitCommit className="w-6 h-6 text-gray-400" />
-                </div>
-                
-                {/* Contenido del commit */}
-                <div className="flex-1">
-                  {/* Hash y título */}
-                  <div className="flex flex-col sm:flex-row text-pretty items-baseline gap-2 mb-1">
-                    <span className="text-sm font-mono text-blue-400">
-                      {generateRandomHash()}
-                    </span>
-                    <span className="text-gray-200">{certificate.title}</span>
+            {personalInfo.certifications && personalInfo.certifications.length > 0 ? (
+              personalInfo.certifications.map((certificate, index) => (
+                certificate && (
+                  <div key={index} className="flex gap-4 relative">
+                    {/* Ícono de commit */}
+                    <div className="w-12 flex justify-center">
+                      <GitCommit className="w-6 h-6 text-gray-400" />
+                    </div>
+                    
+                    {/* Contenido del commit */}
+                    <div className="flex-1">
+                      {/* Hash y título */}
+                      <div className="flex flex-col sm:flex-row text-pretty items-baseline gap-2 mb-1">
+                        <span className="text-sm font-mono text-blue-400">
+                          {generateRandomHash()}
+                        </span>
+                        <span className="text-gray-200">{certificate.title || 'Sin título'}</span>
+                      </div>
+                      
+                      {/* Detalles de la certificación */}
+                      <div className="text-sm text-gray-400 text-pretty space-y-1">
+                        <div><span className="text-gray-300">Institución:</span>  {certificate.organization || 'No especificada'}</div>
+                        <div><span className="text-gray-300">Fecha:</span>  {certificate.date || 'No especificada'}</div>
+                        {certificate.link && (
+                          <div><a href={certificate.link} target="_blank" className="text-blue-400">Link del certificado</a></div>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                  
-                  {/* Detalles de la certificación */}
-                  <div className="text-sm text-gray-400 text-pretty space-y-1">
-                    <div><span className="text-gray-300" >Institución:</span>  {certificate.organization}</div>
-                    <div><span className="text-gray-300" >Fecha:</span>  {certificate.date}</div>
-                    <div><a href={certificate.link} target="_blank" className="text-blue-400">Link del certificado</a></div>
-                  </div>
-                </div>
-              </div>
-            ))}
+                )
+              ))
+            ) : (
+              <div className="text-gray-400 ml-12">No hay certificaciones disponibles.</div>
+            )}
           </div>
         </div>
       </div>

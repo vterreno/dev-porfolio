@@ -1,8 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { getPersonalInfo } from "@/lib/data"
+import data from "@/public/data.json"
 
 export default function Home() {
-  const personalInfo = getPersonalInfo()
+  const { personalInfo } = data
   const email = 'mailto:' + personalInfo.email
 
   return (

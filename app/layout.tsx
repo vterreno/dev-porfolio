@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
 import PageContent from "./pageContent"
-import { getPersonalInfo } from "@/lib/data"
 import './globals.css'
-import { ProjectsProvider } from "./projects/context/projets-context"
+import data from "@/public/data.json"
 
+const { personalInfo } = data
 export const metadata: Metadata = {
-  title: "Porfolio de " + getPersonalInfo().name + " | " + getPersonalInfo().title,
-  description: "Portfolio de" + getPersonalInfo().name + ", " + getPersonalInfo().title, 
+  title: "Porfolio de " + personalInfo.name + " | " + personalInfo.title,
+  description: "Portfolio de" + personalInfo.name + ", " + personalInfo.title, 
   generator: 'v0.dev',
   icons: [
     new URL("/static/favicon.png", "http://localhost:3000"),
@@ -19,10 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return <ProjectsProvider>
-    <PageContent>
+  return <PageContent>
       {children}
     </PageContent>
-  </ProjectsProvider>
-  
 }

@@ -3,14 +3,14 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import data from "@/public/data.json"
 
 export default function Navbar() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
-  const projects = JSON.parse(localStorage.getItem("projectTitles") || "[]")
+  const { projects, personalInfo } = data
 
   return (
     <nav className="border-b border-[#1e3a5f] z-20 relative">
@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="hidden md:flex items-center h-12">
         <div className="px-4 h-full flex items-center w-[20em] py-2 border-r border-[#1e3a5f] text-[#4ec9b0] text-sm ">
           <a href="/">
-            @vterreno
+            @{personalInfo.githubNickname}
           </a>
         </div>
         <div className="flex h-full">
@@ -51,7 +51,11 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div className="flex md:hidden items-center justify-between h-12 px-4">
-        <div className="text-[#4ec9b0]">@vterreno</div>
+        <div className="text-[#4ec9b0]">
+          <a href="/">
+          @{personalInfo.githubNickname}
+          </a>
+        </div>
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 text-gray-300 focus:outline-none">
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
