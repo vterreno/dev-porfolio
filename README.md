@@ -2,7 +2,7 @@
 
 
 <div align="center">
-<a href="https://devporfolionext.netlify.app/">
+<a href="https://devporfolionext.netlify.app/" target="_blank">
 <img src="./public/preview_readme.png">
 </a>
 <p></p>
