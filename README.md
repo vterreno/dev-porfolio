@@ -34,6 +34,18 @@ Inicia el proyecto en modo desarrollo
 npm run dev
 ```
 
+### Información
+El proyecto toma los datos del archivo **/public/data.json**. <br>
+Los comentarios pueden tomar los siguientes formatos:
+
+| Comentario        | Descripción             |
+| -----------       | -----------             |
+| // o  /*          | Normal (verde oscuro)   |
+| //* o * *         | Resaltado (verde claro) |
+| //? o * ?         | Pregunta  (azul)        |
+| //! o * !         | Importante  (rojo)      |
+| //TODO o * TODO  | TODO (naranja)          |
+
 ## 🤝 Cómo contribuir
 
 1. Haz un fork del proyecto 
