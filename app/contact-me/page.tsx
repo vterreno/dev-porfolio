@@ -50,7 +50,7 @@ export default function ContactPage() {
           <div>
             <p className="text-sm text-pretty text-gray-300">
               Si encuentras algún error o deseas proponer alguna mejora, no dudes en colaborar en {" "}
-              <a href="#" target="_blank" className="text-[#4ec9b0] hover:underline" >Github</a>.
+              <a href="https://github.com/vterreno/dev-porfolio" target="_blank" className="text-[#4ec9b0] hover:underline" >Github</a>.
             </p>
           </div>
         </div>
