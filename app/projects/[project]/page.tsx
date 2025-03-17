@@ -76,7 +76,7 @@ export default async function ProjectPage({ params }: { params: { project: strin
             <div className="text-gray-300 mb-2">// _Tecnologías utilizadas</div>
             <div className="block sm:flex items-center gap-2">
               {project.technologies.map((tech, index) => (
-                <div key={index} className="text-sm hover:scale-[1.1] duration-500 transform text-white bg-gray-700 rounded px-3 mb-2 sm:mb-0 py-1">
+                <div key={index} className="text-sm sm:hover:scale-[1.1] duration-500 transform text-white bg-gray-700 rounded px-3 mb-2 sm:mb-0 py-1">
                   {tech}
                 </div>
               ))}
