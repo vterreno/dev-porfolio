@@ -20,7 +20,7 @@ export function ArrowsEditor(): JSX.Element {
                <MoveLeft
                     className="cursor-pointer hover:text-[#F7BE39]"
                     onClick={() => {
-                         const url = window.location.href.substring(22)
+                         const url = window.location.pathname.replace(/^\//, "");
                          const index = urlSteps.indexOf(url)
                          if (index > 0) {
                               window.location.href
