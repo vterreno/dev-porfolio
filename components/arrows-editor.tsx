@@ -14,7 +14,7 @@ export function ArrowsEditor(): JSX.Element {
           ...projects.map(project => `projects/${project.title}`),
           'contact-me'
      ]
-     console.log(urlSteps)
+     
      return (
           <div className="flex gap-2 items-center mr-2">
                <MoveLeft
@@ -31,7 +31,7 @@ export function ArrowsEditor(): JSX.Element {
                <MoveRight
                     className="cursor-pointer hover:text-[#F7BE39]"
                     onClick={() => {
-                         const url = window.location.href.substring(22)
+                         const url = window.location.pathname.replace(/^\//, "");
                          const index = urlSteps.indexOf(url)
                          if (index < urlSteps.length - 1) {
                               window.location.href
