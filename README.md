@@ -13,10 +13,10 @@
 ![NextJS](https://img.shields.io/badge/NextJs-000000?style=flat&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
 ![TypeScript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/vterreno/dev-portfolio)
-![GitHub PRs](https://img.shields.io/github/issues-pr/vterreno/dev-portfolio)
-![GitHub forks](https://img.shields.io/github/forks/vterreno/dev-portfolio)
-![GitHub issues](https://img.shields.io/github/issues/vterreno/dev-portfolio)
+![GitHub stars](https://img.shields.io/github/stars/vterreno/dev-porfolio)
+![GitHub PRs](https://img.shields.io/github/issues-pr/vterreno/dev-porfolio)
+![GitHub forks](https://img.shields.io/github/forks/vterreno/dev-porfolio)
+![GitHub issues](https://img.shields.io/github/issues/vterreno/dev-porfolio)
 
 </div>
 
