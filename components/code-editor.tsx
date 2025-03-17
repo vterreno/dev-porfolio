@@ -53,7 +53,7 @@ export default function CodeEditor({
     <div className={`h-full ${className} text-gray-300 rounded-lg overflow-hidden border border-[#333]`}>
       {title && (
        
-          <div className="flex justify-between items-center border-b border-[#333] p-2 text-sm font-medium">
+          <div className="flex justify-between items-center border-b border-[#333] p-2 px-4 text-sm font-medium">
             {title}
             {urlSteps && <ArrowsEditor urlSteps={urlSteps} />}
           </div>

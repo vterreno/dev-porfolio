@@ -130,7 +130,7 @@ export default function Sidebar() {
   const MobileSidebarToggle = () => (
     <button
       onClick={() => setMobileSidebarOpen(true)}
-      className="md:hidden fixed left-0 top-[40em] -translate-y-1/2 bg-[#1e3a5f] p-2 rounded-r-md z-10"
+      className="md:hidden fixed left-0 top-[36em] -translate-y-1/2 bg-[#1e3a5f] p-2 rounded-r-md z-10"
       aria-label="Open sidebar"
     >
       <ChevronRight size={20} />

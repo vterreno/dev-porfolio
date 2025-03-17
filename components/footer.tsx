@@ -6,12 +6,12 @@ export default function Footer() {
     <div className="border-t border-[#1e3a5f] flex flex-wrap items-center">
       <div className="text-[#4ec9b0] text-xs sm:text-sm border-r border-[#1e3a5f] p-2 px-2 sm:px-4 h-full hidden sm:block">encuéntrame en:</div>
       <Link href="#" className="p-2 sm:px-4 border-r border-[#1e3a5f] h-full hover:text-primary">
-        <Twitter size={16} />
+        <Twitter size={18} />
       </Link>
-      <div className="ml-auto flex items-center gap-1 text-xs sm:text-sm">
+      <div className="ml-auto flex items-center gap-1 text-sm">
         <Link href="https://github.com/vterreno" target="_blank" className="text-[#4ec9b0] border-l border-[#1e3a5f] p-2 sm:px-4 h-full flex items-center gap-1">
           @vterreno
-          <Github size={16} />
+          <Github size={18} />
         </Link>
       </div>
     </div>
